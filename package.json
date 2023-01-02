@@ -1,0 +1,11 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "Algorithms and data structures",
+  "main": "mergeSort.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gustav Lundgren sgvln005@edu.karlstad.se",
+  "license": "ISC"
+}
