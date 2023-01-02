@@ -7,5 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gustav Lundgren sgvln005@edu.karlstad.se",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavlundgren/Algorithms.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/gustavlundgren/Algorithms/issues"
+  },
+  "homepage": "https://github.com/gustavlundgren/Algorithms#readme"
 }
