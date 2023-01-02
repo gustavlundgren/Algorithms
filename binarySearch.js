@@ -1,6 +1,4 @@
-export {}
-
-function binarySearch(array, target) {
+export function binarySearch(array, target) {
     let first = 0;
     let last = array.length - 1;
     let mid;
@@ -20,7 +18,7 @@ function binarySearch(array, target) {
     return null;
 }
 
-function verify(index){
+export function verify(index){
     if (index != null) {
         console.log("Target found at index: ", index);
     }else{
@@ -28,8 +26,8 @@ function verify(index){
     }
 }
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-let result = binarySearch(numbers, 6);
+// let result = binarySearch(numbers, 6);
 
-verify(result);
+// verify(result);

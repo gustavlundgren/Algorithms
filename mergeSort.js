@@ -58,7 +58,7 @@ function merge(left, right) {
 }
 
 function verifySorted(list) {
-    n = list.length;
+    let n = list.length;
 
     if (n == 0 || n == 1) {
         return true;
@@ -69,13 +69,13 @@ function verifySorted(list) {
 
 let aList = [];
 
-for (let i = 0; i < 9500; i++) {
-    aList.push(Math.floor(Math.random() * 1000000));
+for (let i = 0; i < 100; i++) {
+    aList.push(Math.floor(Math.random() * 100));
 }
 
 let numbers = mergeSort(aList);
-let result = binarySearch(numbers);
+let result = binarySearch(numbers, 80);
 
 console.log(verifySorted(numbers));
-console.log(verify(numbers, 80));
+console.log(verify(result));
 console.log(numbers);

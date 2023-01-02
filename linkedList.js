@@ -1,4 +1,4 @@
-class Node {
+export class Node {
     
     constructor(data) {
         this.data = data;
@@ -6,9 +6,31 @@ class Node {
     }
 }
 
-class LinkedList {
+export class LinkedList {
     constructor() {
         this.head;
+    }
+
+    show() {
+        this.output = "List: ";
+
+        if (this.size() == 0) {
+            return null;
+        }
+
+        if (this.size() == 1) {
+            return this.head.data;
+        }
+
+        this.current = this.head;
+
+        while (this.current) {
+            this.output += `${this.current.data}, `;
+            this.current = this.current.nextNode
+        }
+        this. output = this.output.slice(0, -2);
+
+        return this.output;
     }
 
     isEmpty() {
@@ -51,20 +73,20 @@ class LinkedList {
         return null;
     }
 
-    insert(data, pos) {
-        if (pos == 0) {
+    insert(data, index) {
+        if (index == 0) {
             this.add(data);
         }
 
-        if (pos > 0) {
+        if (index > 0) {
             this.new = new Node(data);
 
             this.current = this.head;
-            this.index = pos;
+            this.pos = index;
 
-            while (this.index > 1) {
+            while (this.pos > 1) {
                 this.current = this.node.nextNode;
-                this.index--;
+                this.pos--;
             }
 
             this.prevNode = this.current;
@@ -96,30 +118,38 @@ class LinkedList {
         return this.current;
     }
 
-    read(pos) {
+    nodeAtIndex(index) {
+        if (index == 0) {
+            return this.head;
+        }else {
+            this.current = this.head;
+            this.pos = 0;
+
+            while (this.pos < index) {
+                this.current = this.current.nextNode;
+                this.pos++;
+            }
+
+            return this.current;
+        }
+    }
+
+    read(index) {
         this.current = this.head;
         this.found = false;
         this.count = 0;
 
-        while (this.current && !this.found) {
-            if (this.count != pos) {
+        while (this.current) {
+            if (this.count != index) {
                 this.current = this.current.nextNode;
                 this.count++;
             }else {
-                this.found = true;
+                return this.current.data;
             }
-        }
-
-        return this.current.data;
+        } 
+        
+        return null;
     }
 }
 
 let l = new LinkedList();
-
-l.add(3);
-l.add(7);
-l.add(11);
-l.insert(24, 1);
-
-console.log(l.read(1));
-console.log(l.size());
